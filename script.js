@@ -1,8 +1,3 @@
-// let year = 2005, month = 10, day = 2;
-
-// console.log(date1);
-// console.log(date2);
-// console.log(date3);
 
 function calculateStart() {
     // time is 
@@ -10,6 +5,7 @@ function calculateStart() {
     const date1 = date.getDate();
     const date2 = date.getMonth() + 1;
     const date3 = date.getFullYear();
+    console.log(date1);
 
     let dayInput = document.querySelector(".day input");
     let dayLabel = document.querySelector(".day label");
@@ -31,7 +27,7 @@ function calculateStart() {
         input_error1.innerHTML = "This field is required";
         isDay = false;
     }
-    else if (!(dayInput.value.length > 0 && dayInput.value.length < 3) || Number(dayInput.value) <= 0 || Number(dayInput.value) > 32) {
+    else if (!(dayInput.value.length > 0 && dayInput.value.length < 3) || Number(dayInput.value) <= 0 || Number(dayInput.value) > 31) {
         dayInput.classList.add("errorActive");
         dayLabel.style.color = "red";
         input_error1.innerHTML = "Must be a valid day";
@@ -84,9 +80,14 @@ function calculateStart() {
         let resMonth, resDay;
         if (date2 > monthInput.value){
             resMonth = date2 - Number(monthInput.value);
+        }else {
+            resMonth = Number(monthInput.value) - date2;
         }
+
         if (date1 > dayInput.value) {
             resDay = date1 - Number(dayInput.value);
+        }else {
+            resDay = Number(dayInput.value) - date1;
         }
 
         days.innerHTML = resDay;
