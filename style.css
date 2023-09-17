@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(0, 0%, 86%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.age_wrap {
+    width: 700px;
+    background-color: white;
+    padding: 35px;
+    border-radius: 35px 35px 150px 35px;
+}   
+
+.time_box {
+    width: 500px;
+}
+
+.input_wrap {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.2em;
+}
+
+.day, .month, .year {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.input_wrap input {
+    width: 140px;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.input_wrap label {
+    font-size: 12px;
+    font-weight: 700;
+    color: hsl(0, 1%, 44%);
+    /* letter-spacing: 0.2vw; */
+}
+
+.day .input_error1, .month .input_error2, .year .input_error3 {
+    color: red;
+    letter-spacing: 0.01vw;
+}
+
+/* line box style */
+.line_box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.line {
+    width: 100%;
+    border-bottom: 2px solid #ccc;
+}
+
+.line_logo {
+    padding: 10px;
+    border-radius: 50%;
+    background-color: hsl(259, 100%, 65%);
+}
+
+.line_logo svg {
+    filter: brightness(100);
+    transform: rotate(180deg);
+    position: relative;
+    top: 5px;
+}
+
+.result_box .result {
+    width: 100%;
+    font-size: 6em;
+    display: flex;
+}
+
+.result span {
+    color: hsl(259, 100%, 65%);
+    letter-spacing: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    
+    .container {
+        max-width: 768px;
+    }
+    
+    .age_wrap {
+        width: 370px;
+        background-color: white;
+        padding: 25px;
+        border-radius: 35px 35px 150px 35px;
+        display: flex;
+        flex-direction: column;
+        gap: 3.5em;
+    }   
+    
+    .time_box {
+        width: 100%;    
+    }
+    .input_wrap {
+        width: 100%;
+        gap: 1.2em;
+    }
+    
+    .input_wrap input {
+        width: 100%;
+        padding: 15px;
+        border-radius: 8px;
+        font-size: 18px;
+        font-weight: 800;
+    }
+    
+    .input_wrap label {
+        font-size: 8px;
+        font-weight: 700;
+        color: hsl(0, 1%, 44%);
+        letter-spacing: 0.2vw;
+    }
+    
+    /* line box style */
+    .line_box {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    
+    .line {
+        width: 100%;
+        border-bottom: 2px solid #ccc;
+    }
+    
+    .line_logo {
+        padding: 10px;
+        border-radius: 50%;
+        background-color: hsl(259, 100%, 65%);
+        position: absolute;
+        left: 45%;
+    }
+    
+    .line_logo svg {
+        filter: brightness(100);
+        transform: rotate(180deg);
+        position: relative;
+        top: 5px;
+    }
+    
+    .result_box .result {
+        width: 100%;
+        font-size: 4em;
+    }
+    
+    .result span {
+        color: hsl(259, 100%, 65%);
+        letter-spacing: 10px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    
+    .container {
+        max-width: 375px;
+        padding: 10px;
+    }
+    
+    .age_wrap {
+        width: 100%;
+        background-color: white;
+        padding: 35px;
+        border-radius: 35px 35px 100px 35px;
+        gap: 3em;
+    }   
+    
+    .time_box {
+        width: 100%;    
+    }
+    .input_wrap {
+        width: 100%;
+        gap: 1em;
+    }
+    
+    .input_wrap input {
+        width: 100%;
+        padding: 5px;
+        border-radius: 8px;
+        font-size: 18px;
+        font-weight: 800;
+    }
+    
+    .input_wrap label {
+        font-size: 8px;
+        font-weight: 700;
+        color: hsl(0, 1%, 44%);
+        letter-spacing: 0.2vw;
+    }
+    
+    /* line box style */
+    .line_box {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    
+    .line {
+        width: 100%;
+        border-bottom: 2px solid #ccc;
+    }
+    
+    .line_logo {
+        padding: 10px;
+        border-radius: 50%;
+        background-color: hsl(259, 100%, 65%);
+        position: absolute;
+        left: 45%;
+    }
+    
+    .line_logo svg {
+        width: 40px;
+        height: 34px;
+        filter: brightness(100);
+        transform: rotate(180deg);
+        position: relative;
+        top: 5px;
+    }
+    
+    .result_box .result {
+        width: 100%;
+        font-size:2.5em;
+    }
+    
+    .result span {
+        color: hsl(259, 100%, 65%);
+        letter-spacing: 5px;
+    }
+}
+
+/* js functionaly style */
+.errorActive {
+    border: 1px solid red;
+}
+
+.errorActive:focus {
+    border: none;
+}
+
